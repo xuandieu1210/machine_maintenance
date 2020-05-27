@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/main', 'HomeController@main');
+
+Route::get('donvi/getData', 'DonviController@getData')->name('donvi.getData');
+Route::resource('/donvi', 'DonViController');
+
+Route::get('daivt/getData', 'DaivtController@getData')->name('daivt.getData');
+Route::resource('/daivt', 'DaivtController');
