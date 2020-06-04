@@ -18,8 +18,6 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::post('/main', 'HomeController@main');
-Route::get('/import', 'HomeController@import')->name('import');
 Route::get('/update', 'HomeController@updateThietBi')->name('update');
 
 Route::get('thietbi/getData', 'HomeController@getData')->name('thietbi.getData');
