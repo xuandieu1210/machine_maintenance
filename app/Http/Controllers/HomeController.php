@@ -32,22 +32,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //return $_POST;
-        // $danhsach = DB::table('tbl_thietbi')
-        // ->leftJoin('tbl_tram', 'tbl_tram.ID_TRAM', '=', 'tbl_thietbi.ID_TRAM')
-        // ->select('tbl_thietbi.*', 'tbl_TRAM.*')
-        // ->get();
-
-        // //dd($danhsach);
-
-        // $listHETNhot = [];
-
-        // foreach ($danhsach as $thietbi ) {
-        //     if ( $thietbi->NHOT_TIEU_HAO >= $thietbi->DUNG_TICH_BINH_NHOT || time() > strtotime($thietbi->THOI_GIAN_THAY_NHOT . ' +6 months')  ) {
-        //         array_push( $listHETNhot, $thietbi);
-        //     }
-
-        // }
 
 
         return view('home');
@@ -219,14 +203,4 @@ class HomeController extends Controller
         return "Thành công";
     }
 
-    public function html()
-    {
-        return $this->builder()
-                    ->columns($this->getColumns())
-                    ->ajax('')
-                    ->addAction(['width' => '80px'])
-                    ->parameters([
-                        'buttons'      => ['export', 'print', 'reset', 'reload'],
-                    ]);
-    }
 }
