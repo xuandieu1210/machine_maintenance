@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateBaoCaoHangThangTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -22,16 +23,17 @@ class CreateBaoCaoHangThangTable extends Migration
             $table->string('NGUYEN_NHAN', 255);
             $table->dateTime('THOI_GIAN_SU_CO');	
             $table->dateTime('THOI_GIAN_CLR');	
-            $table->dateTime('THOI_GIAN_CB');	
+            $table->integer('THOI_GIAN_CB');	
             $table->string('TRANG_THAI_CLR', 100);	
             $table->string('MA_CB', 100);	
-            $table->string('CHI_TIET_CANH_BAO', 255);	
-            $table->string('VNP_GHI_CHU', 255);	
-            $table->string('TINH_GHI_CHU', 255);		
-            $table->string('LOAI_SU_CO', 255);	
+            $table->text('CHI_TIET_CANH_BAO');	
+            $table->text('VNP_GHI_CHU');	
+            $table->text('TINH_GHI_CHU');		
+            $table->string('LOAI_SU_CO');	
             $table->string('THOI_GIAN_CANH_BAO_AC', 255);
-
+            $table->date('THANG');
             $table->timestamps();
+            $table->unique( ['ID_THIETBI', 'THOI_GIAN_SU_CO']);
         });
     }
 

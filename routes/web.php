@@ -11,17 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::post('/main', 'HomeController@main');
+Route::get('/import', 'HomeController@import')->name('import');
+Route::get('/update', 'HomeController@updateThietBi')->name('update');
 
-Route::get('donvi/getData', 'DonviController@getData')->name('donvi.getData');
-Route::resource('/donvi', 'DonViController');
-
-Route::get('daivt/getData', 'DaivtController@getData')->name('daivt.getData');
-Route::resource('/daivt', 'DaivtController');
+Route::get('thietbi/getData', 'HomeController@getData')->name('thietbi.getData');

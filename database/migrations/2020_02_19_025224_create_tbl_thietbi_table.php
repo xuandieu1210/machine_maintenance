@@ -23,7 +23,7 @@ class CreateTblThietbiTable extends Migration
             $table->float('DINH_MUC_NHOT', 8, 2);	
             $table->float('DUNG_TICH_BINH_NHOT', 8, 2);
             $table->float('NHOT_TIEU_HAO', 8, 2)->nullable($value = true);
-            $table->dateTime('THOI_GIAN_THAY_NHOT')->nullable($value = true);
+            $table->date('THOI_GIAN_THAY_NHOT')->nullable($value = true);
             $table->integer('ID_TRAM');	
             $table->timestamps();
         });

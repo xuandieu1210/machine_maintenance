@@ -177,6 +177,7 @@ return [
 
         Yajra\DataTables\DataTablesServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Yajra\DataTables\ButtonsServiceProvider::class,
 
     ],
 
